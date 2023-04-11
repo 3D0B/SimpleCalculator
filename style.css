@@ -42,16 +42,21 @@ body {
     width: 100%;
 }
 .calculator__display--small{
-    font-size: 3em;
+    text-align: end;
+    font-size: 6vw;
     height: 40%;
+    line-height: 10vh;
+
     color: rgb(123, 122, 122);
 
     /* background-color: aquamarine; */
 }
 .calculator__display--big{
-    font-size: 5vw;
+    font-size: 10vw;
     overflow: hidden;
     height: 60%;
+    line-height: 10vh;
+
     
     /* background-color: aqua; */
 }
