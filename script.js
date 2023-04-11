@@ -211,6 +211,7 @@ class Calculator {
       ? this.displayBig.innerHTML
       : this.displayBig.innerHTML + ('.');
   }
+
 }
 new Calculator();
 console.log('hello');
