@@ -12,6 +12,7 @@ const DOT_CLASS_SELECTOR = '.calculator__button--is-dot';
 const SIGN_CHANGE_CLASS_SELECTOR = '.calculator__button--is-sign-change';
 const EQUAL_CLASS_SELECTOR = '.calculator__button--is-equal';
 
+
 class Calculator {
 
   constructor() {
@@ -26,6 +27,8 @@ class Calculator {
     this.bindOfDisplay();
     this.bindOfNumbers();
     this.bindToButton();
+    window.scrollTo(0, 0);
+
 
 
     const calculatorOb = document.querySelector('.calculator');
@@ -107,7 +110,7 @@ class Calculator {
     this.bindToButtons(DOT_CLASS_SELECTOR, () => this.dot());
 
   }
-  backspaceLong(){
+  backspaceLong() {
     this.displayBig.innerHTML = 0;
   }
   clear() {
@@ -126,7 +129,7 @@ class Calculator {
     this.displayBig.innerHTML = this.displayBig.innerHTML == '0' || this.displayBig.innerHTML == null || this.displayBig.innerHTML.length == 1
       ? 0
       : this.displayBig.innerHTML.slice(0, -1);
-   
+
   }
   changeDisplay(value) {
 
@@ -211,6 +214,7 @@ class Calculator {
       ? this.displayBig.innerHTML
       : this.displayBig.innerHTML + ('.');
   }
+
 
 }
 new Calculator();
