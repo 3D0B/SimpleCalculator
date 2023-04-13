@@ -1,10 +1,13 @@
-:root{
+:root {
     --light-buttons-color: rgb(108, 106, 106);
     --dark-buttons-color: rgb(67, 66, 66);
 }
-  html, body {
+
+html,
+body {
     zoom: reset;
-  }
+}
+
 * {
     box-sizing: border-box;
     user-select: none;
@@ -29,27 +32,30 @@ body {
 
 .calculator {
     background-color: rgb(24, 24, 24);
-    min-width: 300px;
-    min-height: 500px;
+    /* min-width: 150px; */
+    /* min-height: 500px; */
     width: 100vw;
     height: 100vh;
     display: grid;
     grid-template-rows: 2fr 5fr;
     padding: 1em;
 }
-.calculator__display-container{
+
+.calculator__display-container {
     display: flex;
     flex-direction: column;
 }
-.calculator__display{
+
+.calculator__display {
     color: white;
     text-align: end;
     display: block;
     width: 100%;
 }
-.calculator__display--small{
+
+.calculator__display--small {
     text-align: end;
-    font-size: 6vw;
+    font-size: 4vw;
     height: 40%;
     line-height: 10vh;
 
@@ -57,13 +63,16 @@ body {
 
     /* background-color: aquamarine; */
 }
-.calculator__display--big{
+
+.calculator__display--big {
     font-size: 10vw;
     overflow: hidden;
     height: 60%;
-    line-height: 10vh;
+    line-height: 15vh;
+    padding: 0;
+    margin: 0;
 
-    
+
     /* background-color: aqua; */
 }
 
@@ -83,36 +92,64 @@ body {
     background-color: var(--dark-buttons-color);
     color: aliceblue;
     font-size: 2em;
-    border-radius:0.1em;
+    border-radius: 0.1em;
     cursor: pointer;
 
 }
-.calculator__button:hover{
+
+.calculator__button:hover {
     opacity: 90%;
 }
-.calculator__button:active{
+
+.calculator__button:active {
     box-shadow: inset 0 0 0 1px rgb(24, 24, 24);
     font-size: 1.8em
 }
+
 /* .calculator__button:hover{
     opacity: 55%;
     cursor: none;
 } */
 
-.calculator__button--is-number{
+.calculator__button--is-number {
     background-color: var(--light-buttons-color);
 }
-.calculator__button--is-dot{
+
+.calculator__button--is-dot {
     background-color: var(--light-buttons-color);
 
 }
-.calculator__button--is-equal{
+
+.calculator__button--is-equal {
     grid-row: span 2;
     background-color: rgb(115, 115, 253);
 }
-.version{
+
+.version {
     font-size: 10px;
     color: aliceblue;
     padding: 0;
     margin: 0;
+}
+
+@media (orientation:landscape) {
+
+    /* style CSS dla ekranów w orientacji poziomej */
+    .calculator__display--big {
+        font-size: 8vw;
+    }
+    .calculator__display--small{
+        font-size: 5vw;
+    }
+}
+
+@media (orientation:portrait) {
+
+    /* style CSS dla ekranów w orientacji poziomej */
+    .calculator__display--big {
+        font-size: 10vw;
+    }
+    .calculator__display--small{
+        font-size: 6vw;
+    }
 }
