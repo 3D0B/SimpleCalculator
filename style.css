@@ -3,7 +3,6 @@
     --dark-buttons-color: rgb(67, 66, 66);
 }
   html, body {
-    touch-action:pan-y;
     zoom: reset;
   }
 * {
