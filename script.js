@@ -27,7 +27,6 @@ class Calculator {
     this.bindOfDisplay();
     this.bindOfNumbers();
     this.bindToButton();
-    window.scrollTo(0, 0);
 
 
 
@@ -210,7 +209,7 @@ class Calculator {
     this.displayValue = this.displayBig.innerHTML;
   }
   dot() {
-    this.displayBig.innerHTML = this.displayBig.innerHTML.includes(",")
+    this.displayBig.innerHTML = this.displayBig.innerHTML.includes(".")
       ? this.displayBig.innerHTML
       : this.displayBig.innerHTML + ('.');
   }
