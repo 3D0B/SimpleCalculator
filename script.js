@@ -12,7 +12,11 @@ const DOT_CLASS_SELECTOR = '.calculator__button--is-dot';
 const SIGN_CHANGE_CLASS_SELECTOR = '.calculator__button--is-sign-change';
 const EQUAL_CLASS_SELECTOR = '.calculator__button--is-equal';
 
-
+document.addEventListener('touchmove', function(e) {
+  if (e.scale !== 1) {
+    e.preventDefault();
+  }
+}, { passive: false });
 class Calculator {
 
   constructor() {
