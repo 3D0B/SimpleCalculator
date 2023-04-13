@@ -37,13 +37,15 @@ body {
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-rows: 2fr 5fr;
-    padding: 1em;
+    grid-template-rows: 1fr 5fr;
+    padding: 0.2em;
 }
 
 .calculator__display-container {
     display: flex;
     flex-direction: column;
+    min-height: 8vw;
+    
 }
 
 .calculator__display {
@@ -57,23 +59,16 @@ body {
     text-align: end;
     font-size: 4vw;
     height: 40%;
-    line-height: 10vh;
 
     color: rgb(123, 122, 122);
 
-    /* background-color: aquamarine; */
 }
 
 .calculator__display--big {
     font-size: 10vw;
     overflow: hidden;
     height: 60%;
-    line-height: 15vh;
-    padding: 0;
-    margin: 0;
-
-
-    /* background-color: aqua; */
+   
 }
 
 .calculator__keyboard {
@@ -136,10 +131,10 @@ body {
 
     /* style CSS dla ekranów w orientacji poziomej */
     .calculator__display--big {
-        font-size: 8vw;
+        font-size: 5vw;
     }
     .calculator__display--small{
-        font-size: 5vw;
+        font-size: 3vw;
     }
 }
 
