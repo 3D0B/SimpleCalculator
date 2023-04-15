@@ -1,0 +1,13 @@
+{
+    "name": "Simple Calculator",
+    "icons": [
+        {
+          "size": "48x48",
+          "src": "/calculate_FILL1_wght400_GRAD200_opsz24.png",
+          "type": "image/png"
+        }
+    ],
+    "start_url": "/index.html",
+    "display": "standalone",
+    "prefer_related_applications": "unset"
+}
