@@ -12,11 +12,23 @@ const DOT_CLASS_SELECTOR = '.calculator__button--is-dot';
 const SIGN_CHANGE_CLASS_SELECTOR = '.calculator__button--is-sign-change';
 const EQUAL_CLASS_SELECTOR = '.calculator__button--is-equal';
 
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function (err) {
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+
+
 
 class Calculator {
 
   constructor() {
     console.log('kalkulator działa');
+    alert("pobierz kalkulator");
     let displayValue = 0;
     let previousDisplayValue = null;
     let newValue = 0;
@@ -109,7 +121,7 @@ class Calculator {
     this.bindToButtons(DOT_CLASS_SELECTOR, () => this.dot(), () => this.showVersion());
 
   }
-  showVersion(){
+  showVersion() {
     this.displaySmall.innerHTML = 'Version';
     this.displayBig.innerHTML = '1.3';
     console.log('v1.3');
