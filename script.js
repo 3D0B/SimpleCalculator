@@ -106,11 +106,11 @@ class Calculator {
     this.bindToButtons(DIVIDE_CLASS_SELECTOR, () => this.divide());
     this.bindToButtons(EQUAL_CLASS_SELECTOR, () => this.equal());
     this.bindToButtons(SIGN_CHANGE_CLASS_SELECTOR, () => this.signChange());
-    this.bindToButtons(DOT_CLASS_SELECTOR, () => this.dot(),() => this.showVersion());
+    this.bindToButtons(DOT_CLASS_SELECTOR, () => this.dot(), () => this.showVersion());
 
   }
   showVersion(){
-    this.displaySmall.innerHTML = 'Version =';
+    this.displaySmall.innerHTML = 'Version';
     this.displayBig.innerHTML = '1.3';
     console.log('v1.3');
   }
