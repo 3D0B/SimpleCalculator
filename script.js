@@ -12,15 +12,7 @@ const DOT_CLASS_SELECTOR = '.calculator__button--is-dot';
 const SIGN_CHANGE_CLASS_SELECTOR = '.calculator__button--is-sign-change';
 const EQUAL_CLASS_SELECTOR = '.calculator__button--is-equal';
 
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function (err) {
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
+
 
 
 
