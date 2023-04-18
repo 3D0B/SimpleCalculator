@@ -1,66 +1,38 @@
-// Nazwa pamięci podręcznej dla plików statycznych
-const CACHE_NAME = 'static-cache-v1';
-
-// Pliki do zapisania w pamięci podręcznej
-const FILES_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/style.css',
-  '/script.js'
+// nazywamy nasze cache- w zmiennej będzie wygodniej
+const MY_CACHE = 'cache-name';
+// w tej tablicy lądują wszystkie pliki, które chcemy dodać do cache
+const MY_FILES = [
+        '/style.css',
+        '/script.js'
 ];
 
-// Rejestrowanie pracownika usługi
+// instalujemy nasz service worker
 self.addEventListener('install', function(event) {
-  console.log('Service worker installing...');
-
-  // Dodanie plików do pamięci podręcznej
   event.waitUntil(
-    caches.open(CACHE_NAME).then(function(cache) {
-      console.log('Service worker caching files...');
-      return cache.addAll(FILES_TO_CACHE);
+    caches.open(MY_CACHE).then(function(cache) {
+      return cache.addAll(MY_FILES);
     })
   );
 });
-
-// Obsługa żądań sieciowych
-self.addEventListener('fetch', function(event) {
-  console.log('Service worker fetching...');
-
-  // Sprawdzenie, czy plik jest w pamięci podręcznej
-  event.respondWith(
-    caches.match(event.request).then(function(response) {
-      if (response) {
-        console.log('Found in cache:', event.request.url);
-        return response;
-      }
-      console.log('Not found in cache:', event.request.url);
-
-      // Pobranie pliku z sieci i zapisanie w pamięci podręcznej
-      return fetch(event.request).then(function(response) {
-        const responseToCache = response.clone();
-        caches.open(CACHE_NAME).then(function(cache) {
-          cache.put(event.request, responseToCache);
-        });
-        return response;
-      });
-    })
-  );
-});
-
-// Czyszczenie nieaktualnych pamięci podręcznych
+// po aktywacji chcę skasować wszystkie cache w naszej domenie, które nie są naszym cache (to opcjonalne)
 self.addEventListener('activate', function(event) {
-  console.log('Service worker activating...');
-
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
       return Promise.all(
-        cacheNames.map(function(cacheName) {
-          if (cacheName !== CACHE_NAME) {
-            console.log('Deleting cache:', cacheName);
-            return caches.delete(cacheName);
-          }
+        cacheNames.filter(function(cacheName) {
+          return cacheName !== MY_CACHE;
+        }).map(function(cacheName) {
+          return caches.delete(cacheName);
         })
       );
+    })
+  );
+});
+// strategia 'Network falling back to cache'
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    fetch(event.request).catch(function() {
+      return caches.match(event.request);
     })
   );
 });
