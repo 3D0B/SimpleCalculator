@@ -20,7 +20,7 @@ class Calculator {
 
   constructor() {
     console.log('kalkulator działa');
-    alert("pobierz kalkulator");
+    
     let displayValue = 0;
     let previousDisplayValue = null;
     let newValue = 0;
