@@ -43,8 +43,7 @@
         {
           "size": "1024x1024",
           "src": "/icons/maskable_icon_x1024.png",
-          "type": "image/png",
-          "purpose": "maskable any"
+          "type": "image/png"
         }
     ],
     "display": "standalone",
