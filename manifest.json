@@ -2,6 +2,7 @@
     "name": "Simple Calculator",
     "start_url": "/",
     "theme_color": "#317EFB",
+    "background_color": " #424242",
     "icons": [
         {
           "size": "48x48",
