@@ -1,6 +1,7 @@
 {
     "name": "Simple Calculator",
-    "start_url": "/",
+    "short_name": "SimpleCalc",
+    "start_url": "/index.html",
     "theme_color": "#317EFB",
     "background_color": " #424242",
     "icons": [
