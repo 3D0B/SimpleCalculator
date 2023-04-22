@@ -119,7 +119,7 @@ body {
 
 .calculator__button--is-equal {
     grid-row: span 2;
-    background-color: rgb(115, 115, 253);
+    background-color: rgb(115, 115, 255);
 }
 
 .version {
