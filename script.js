@@ -115,8 +115,8 @@ class Calculator {
   }
   showVersion() {
     this.displaySmall.innerHTML = 'Version';
-    this.displayBig.innerHTML = '1.8.2';
-    console.log('v1.8.2');
+    this.displayBig.innerHTML = '1.8.3';
+    console.log('v1.8.3');
   }
   backspaceLong() {
     this.displayBig.innerHTML = 0;
