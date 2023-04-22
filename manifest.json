@@ -3,8 +3,8 @@
     "short_name": "SimpleCalc",
     "id": "com.example.myapp",
     "start_url": "/",
-    "theme_color": "#317EFB",
-    "background_color": " #424242",
+    "theme_color": "#434242",
+    "background_color": "#434242",
     "icons": [
         {
           "size": "48x48",
