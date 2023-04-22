@@ -1,6 +1,8 @@
 const DISPLAY_SMAL = '.calculator__display--small';
 const DISPLAY_BIG = '.calculator__display--big';
 
+console.log("hellooo");
+
 const NUMBER_CLASS_SELECTOR = '.calculator__button--is-number';
 const CLEAR_CLASS_SELECTOR = '.calculator__button--is-clear';
 const BACKSPACE_CLASS_SELECTOR = '.calculator__button--is-backspace';
