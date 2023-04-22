@@ -14,7 +14,36 @@
 </head>
 
 <body>
-  <button class="butInstall"></button>
+  <h1>InstallableR</h1>
+
+    <p id="requireHTTPS" class="hidden">
+      <b>STOP!</b> This page <b>must</b> be served over HTTPS. Please
+      <a>reload this page via HTTPS</a>.
+    </p>
+    <p id="requireTopLevel" class="hidden">
+      <b>STOP!</b> This page <b>must not</b> be served in an iframe. Please
+      <a target="_top">click here</a> to load the page as the top-level window.
+    </p>
+
+    <p>
+      Make me installable, follow the
+      <a href="https://web.dev/codelab-make-installable/">instructions</a> here.
+    </p>
+
+    <!-- Install button, hidden by default -->
+    <div id="installContainer" class="hidden">
+      <button id="butInstall" type="button">Install</button>
+    </div>
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div
+      class="glitchButton"
+      style="position: fixed; top: 20px; right: 20px"
+    ></div>
   <div class="calculator">
     <div class="calculator__display-container">
 
