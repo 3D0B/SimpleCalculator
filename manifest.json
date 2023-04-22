@@ -28,7 +28,9 @@
         {
           "size": "192x192",
           "src": "icons/maskable/maskable_icon_x192.png",
-          "type": "image/png"
+          "type": "image/png",
+          "purpose": "any"
+
         },
         {
           "size": "384x384",
