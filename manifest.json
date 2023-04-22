@@ -1,6 +1,7 @@
 {
     "name": "Simple Calculator",
     "short_name": "SimpleCalc",
+    "id": "com.example.myapp",
     "start_url": "/",
     "theme_color": "#317EFB",
     "background_color": " #424242",
