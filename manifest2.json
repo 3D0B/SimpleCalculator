@@ -10,10 +10,6 @@
   "scope": "/",
   "icons": [
     {
-      "src": "icons/48.png",
-      "sizes": "48x48"
-    },
-    {
       "src": "icons/win-512.png",
       "sizes": "512x512"
     },
@@ -22,7 +18,7 @@
       "sizes": "192x192"
     },
     {
-      "src": "icons/512.png",
+      "src": "icons2/512.png",
       "sizes": "512x512",
       "purpose": "maskable"
     },
