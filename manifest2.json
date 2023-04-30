@@ -1,38 +1,30 @@
 {
-    "name": "Simple Calculator",
-    "short_name": "SimpleCalc",
-    "id": "com.example.myapp",
-    "start_url": "/",
-    "theme_color": "#434242",
-    "background_color": "#434242",
-    "display": "standalone",
-    "prefer_related_applications": false,
-    "scope": "/",
-    "icons": [
-        {
-          "src": "icons/48.png",
-          "sizes": "48x48",
-          "purpose": "maskable"
-
-        },
-        {
-          "src": "icons/192.png",
-          "sizes": "192x192",
-          "purpose": "maskable"
-
-        },
-        {
-          "src": "icons/512.png",
-          "sizes": "512x512",
-          "purpose": "maskable"
-        },
-        {
-          "src": "icons/1024.png",
-          "sizes": "1024x1024",
-          "purpose": "maskable"
-        }
-      ]
-  }
-  
-    
-  
+  "name": "Simple Calculator",
+  "short_name": "SimpleCalc",
+  "id": "com.example.myapp",
+  "start_url": "/",
+  "theme_color": "#434242",
+  "background_color": "#434242",
+  "display": "standalone",
+  "prefer_related_applications": false,
+  "scope": "/",
+  "icons": [
+    {
+      "src": "icons/48.png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "icons/192.png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icons/512.png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/1024.png",
+      "sizes": "1024x1024"
+    }
+  ]
+}
