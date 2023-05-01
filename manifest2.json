@@ -35,6 +35,10 @@
     {
       "src": "ios/1024.png",
       "sizes": "1024x1024"
+    },
+    {
+      "src": "ios/win-512.png",
+      "sizes": "512x512"
     }
   ]
 }
