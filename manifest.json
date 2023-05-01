@@ -24,8 +24,8 @@
       "sizes": "192x192"
     },
     {
-      "src": "icons/desktop/192.png",
-      "sizes": "192x192"
+      "src": "icons/desktop/512.png",
+      "sizes": "512x512"
     }
   ]
 }
