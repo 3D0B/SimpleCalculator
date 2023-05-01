@@ -1,0 +1,31 @@
+{
+  "name": "Simple Calculator",
+  "short_name": "SimpleCalc",
+  "id": "com.example.myapp",
+  "start_url": "/",
+  "theme_color": "#434242",
+  "background_color": "#434242",
+  "display": "standalone",
+  "prefer_related_applications": false,
+  "scope": "/",
+  "icons": [
+
+    {
+      "src": "icons/Mobile/192.png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icons/Mobile/512.png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/desktop/192.png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icons/desktop/192.png",
+      "sizes": "192x192"
+    }
+  ]
+}
