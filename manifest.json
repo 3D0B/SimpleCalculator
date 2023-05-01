@@ -11,20 +11,20 @@
   "icons": [
 
     {
-      "src": "icons/Mobile/192.png",
+      "src": "Icons/Mobile/192.png",
       "sizes": "192x192"
     },
     {
-      "src": "icons/Mobile/512.png",
+      "src": "Icons/Mobile/512.png",
       "sizes": "512x512",
       "purpose": "maskable"
     },
     {
-      "src": "icons/desktop/192.png",
+      "src": "Icons/desktop/192.png",
       "sizes": "192x192"
     },
     {
-      "src": "icons/desktop/512.png",
+      "src": "Icons/desktop/512.png",
       "sizes": "512x512"
     }
   ]
