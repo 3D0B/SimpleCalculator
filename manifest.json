@@ -1,10 +1,10 @@
 {
-  "name": "Simple Calculator 2.0",
+  "name": "Simple Calculator 2.1",
   "short_name": "SimpleCalc",
   "id": "com.example.myapp",
   "start_url": "/",
   "theme_color": "#6464c8",
-  "background_color": "#c8c8c8",
+  "background_color": "#EBEBEB",
   "display": "standalone",
   "prefer_related_applications": false,
   "scope": "/",
