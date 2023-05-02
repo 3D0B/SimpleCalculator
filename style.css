@@ -1,7 +1,7 @@
 :root {
-    --light-calculator-color: rgb(170, 170, 170);
-    --light-num-buttons-color: rgb(200, 200, 200);
-    --light-func-buttons-color: rgb(185, 185, 185);
+    --light-calculator-color: rgb(200, 200, 200);
+    --light-num-buttons-color: rgb(230, 230, 230);
+    --light-func-buttons-color: rgb(215, 215, 215);
     --light-font-color: rgb(50, 50, 50);
     --dark-calculator-color: rgb(25, 25, 25);
     --dark-num-buttons-color: rgb(100, 100, 100);

@@ -3,11 +3,17 @@
   "short_name": "SimpleCalc",
   "id": "com.example.myapp",
   "start_url": "/",
-  "theme_color": "#434242",
-  "background_color": "#434242",
+  "theme_color": "#6464c8",
+  "background_color": "#c8c8c8",
   "display": "standalone",
   "prefer_related_applications": false,
   "scope": "/",
+  "splash_screen": {
+    "full_screen": true,
+    "image_path": "Icons/desktop/512.png",
+    "background_color": "#c8c8c8",
+    "portrait_only": true
+  },
   "icons": [
 
     {
