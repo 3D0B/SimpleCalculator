@@ -1,5 +1,5 @@
 {
-  "name": "Simple Calculator v3.0",
+  "name": "Simple Calculator :)",
   "short_name": "SimpleCalc",
   "id": "com.example.myapp",
   "start_url": "/",
@@ -10,17 +10,15 @@
   "scope": "/",
   "splash_screen": {
     "full_screen": true,
-    "image_path": "Icons/desktop/192.png",
+    "image_path": "Icons/desktop/512.png",
     "background_color": "#c8c8c8",
     "portrait_only": true
   },
   "icons": [
-
     {
       "src": "Icons/Mobile/192.png",
       "sizes": "192x192",
       "purpose": "any"
-
     },
     {
       "src": "Icons/Mobile/512.png",
@@ -34,7 +32,9 @@
     },
     {
       "src": "Icons/desktop/512.png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "maskable"
+
     }
   ]
 }
