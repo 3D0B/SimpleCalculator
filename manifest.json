@@ -10,7 +10,7 @@
   "scope": "/",
   "splash_screen": {
     "full_screen": true,
-    "image_path": "Icons/desktop/512.png",
+    "image_path": "Icons/desktop/192.png",
     "background_color": "#c8c8c8",
     "portrait_only": true
   },
