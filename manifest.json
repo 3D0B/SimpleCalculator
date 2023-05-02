@@ -18,7 +18,9 @@
 
     {
       "src": "Icons/Mobile/192.png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any"
+
     },
     {
       "src": "Icons/Mobile/512.png",
@@ -27,7 +29,8 @@
     },
     {
       "src": "Icons/desktop/192.png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any"
     },
     {
       "src": "Icons/desktop/512.png",
