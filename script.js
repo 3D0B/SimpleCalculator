@@ -12,12 +12,12 @@ const DOT_CLASS_SELECTOR = '.calculator__button--is-dot';
 const SIGN_CHANGE_CLASS_SELECTOR = '.calculator__button--is-sign-change';
 const EQUAL_CLASS_SELECTOR = '.calculator__button--is-equal';
 
-console.log('PWaaaaaaa');
+console.log('PWaayyyaa');
 //rejestracja pracownika
 if ("serviceWorker" in navigator) {
   // Register a service worker hosted at the root of the
   // site using the default scope.
-  navigator.serviceWorker.register("/sw.js")
+  navigator.serviceWorker.register("sw.js")
     .then(
       (registration) => {
         console.log("Service worker registration succeeded:", registration);
