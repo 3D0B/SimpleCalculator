@@ -2,9 +2,9 @@
 var staticCacheName = 'static-cache-v1';
 
 const filesToCache = [
-    "/index.html",
-    "/script.js",
-    "/style.css"
+    "./index.html",
+    "./script.js",
+    "./style.css"
 ];
 
 self.addEventListener('install', function (event) {
