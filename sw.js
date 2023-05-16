@@ -1,10 +1,3 @@
-self.addEventListener("install", (e) => {
-    console.log("[Service Worker] Install");
-});
-
-self.addEventListener("activate", event => {
-    console.log("Service worker activated");
-});
 
 var staticCacheName = 'static-cache-v1';
 
