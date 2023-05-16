@@ -22,6 +22,9 @@ self.addEventListener('fetch', function (event) {
         })
     );
 });
+self.addEventListener("activate", event => {
+    console.log("Service worker activated");
+});
 
 self.addEventListener('activate', function (event) {
     event.waitUntil(

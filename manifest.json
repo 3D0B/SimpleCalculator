@@ -1,5 +1,5 @@
 {
-  "name": "Simple Calculator PWA",
+  "name": "Simple Calculator",
   "short_name": "SimpleCalc",
   "id": "com.example.myapp",
   "start_url": "/",
