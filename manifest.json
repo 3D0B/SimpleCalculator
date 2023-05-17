@@ -39,7 +39,7 @@
   "background_color": "#EBEBEB",
   "display": "standalone",
   "prefer_related_applications": false,
-  "scope": "/",
+  "scope": "./",
   "icons": [
     {
       "src": "Icons/Mobile/2.0/192.png",
