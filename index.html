@@ -18,7 +18,7 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/SimpleCalculator/sw.js', { scope: '/SimpleCalculator/' })
+        navigator.serviceWorker.register('./SimpleCalculator/sw.js', { scope: '/SimpleCalculator/' })
           .then(function(registration) {
             console.log('sir Service Worker jest zarejestrowany:', registration);
           })
