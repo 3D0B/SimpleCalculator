@@ -24,12 +24,6 @@
     "description": "PWABuilder Home Screen"
   },
   {
-    "src": "https://www.pwabuilder.com/assets/screenshots/screen2.png",
-    "sizes": "2880/1800",
-    "type": "image/png",
-    "description": "PWABuilder Report Card"
-  },
-  {
     "src": "https://www.pwabuilder.com/assets/screenshots/screen3.png",
     "sizes": "2880x1800",
     "type": "image/png",
