@@ -5,6 +5,7 @@ const urlsToCache = [
     '/SimpleCalculator/style.css',
     '/SimpleCalculator/script.js',
     '/SimpleCalculator/manifest.json'
+    // nowy
 ];
 
 self.addEventListener('install', (event) => {
@@ -15,11 +16,6 @@ self.addEventListener('install', (event) => {
             })
     );
 });
-self.addEventListener('install', (event) => {
-    event.waitUntil(
-        self.skipWaiting()
-    );
-})
 
 self.addEventListener('fetch', (event) => {
     event.respondWith(
