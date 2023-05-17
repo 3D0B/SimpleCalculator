@@ -62,7 +62,7 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('install', (event) => {
     event.waitUntil(
         addResourcesToCache([
-            './',
+            
             './index.html',
             "./index.html",
             "./script.js",
