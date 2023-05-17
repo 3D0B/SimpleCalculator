@@ -18,9 +18,9 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
-        navigator.serviceWorker.register('./sw.js', { scope: '/' })
+        navigator.serviceWorker.register('./sw.js', { scope: '/index.html' })
           .then(function(registration) {
-            console.log('sir Service Worker jest zarejestrowany:', registration);
+            console.log('sir Service Worker nietjest zarejestrowany:', registration);
           })
           .catch(function(error) {
             console.log('Błąd rejestracji Service Workera:', error);
