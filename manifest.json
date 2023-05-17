@@ -1,14 +1,51 @@
 {
+"display_override": ["window-controls-overlay"], 
+"protocol_handlers": [{"protocol":"mailto","url":"/newEmail?to=%s"}], 
+"description": "", 
+"shortcuts": [
+  {
+    "name": "Start Live Session",
+    "short_name": "Start Live",
+    "description": "Jump direction into starting or joining a live session",
+    "url": "/?startLive",
+    "icons": [
+      {
+        "src": "https://pwabuilder.com/assets/icons/icon_192.png",
+        "sizes": "192x192"
+      }
+    ]
+  }
+], 
+"screenshots": [
+  {
+    "src": "https://www.pwabuilder.com/assets/screenshots/screen1.png",
+    "sizes": "2880x1800",
+    "type": "image/png",
+    "description": "PWABuilder Home Screen"
+  },
+  {
+    "src": "https://www.pwabuilder.com/assets/screenshots/screen2.png",
+    "sizes": "2880/1800",
+    "type": "image/png",
+    "description": "PWABuilder Report Card"
+  },
+  {
+    "src": "https://www.pwabuilder.com/assets/screenshots/screen3.png",
+    "sizes": "2880x1800",
+    "type": "image/png",
+    "description": "Manifest information on the Report Card"
+  }
+], 
+  "orientation": "any",
   "name": "Simple Calculator",
   "short_name": "SimpleCalc",
   "id": "com.example.myapp",
-  "start_url": "/",
+  "start_url": "./index.html",
   "theme_color": "#6464c8",
   "background_color": "#EBEBEB",
   "display": "standalone",
   "prefer_related_applications": false,
   "scope": "/",
-  
   "icons": [
     {
       "src": "Icons/Mobile/2.0/192.png",
@@ -29,7 +66,6 @@
       "src": "Icons/desktop/2.0/512.png",
       "sizes": "512x512",
       "purpose": "maskable"
-
     }
   ]
 }
