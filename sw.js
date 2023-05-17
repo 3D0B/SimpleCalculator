@@ -1,81 +1,59 @@
 
+const PRECACHE = 'precache-v1';
+const RUNTIME = 'runtime';
 
-const addResourcesToCache = async (resources) => {
-    const cache = await caches.open('v1');
-    await cache.addAll(resources);
-};
+// A list of local resources we always want to be cached.
+const PRECACHE_URLS = [
+    './',
+    './index.html',
+    "./script.js",
+    "./style.css",
+];
 
-const putInCache = async (request, response) => {
-    const cache = await caches.open('v1');
-    await cache.put(request, response);
-};
-
-const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
-    // First try to get the resource from the cache
-    const responseFromCache = await caches.match(request);
-    if (responseFromCache) {
-        return responseFromCache;
-    }
-
-    // Next try to use the preloaded response, if it's there
-    const preloadResponse = await preloadResponsePromise;
-    if (preloadResponse) {
-        console.info('using preload response', preloadResponse);
-        putInCache(request, preloadResponse.clone());
-        return preloadResponse;
-    }
-
-    // Next try to get the resource from the network
-    try {
-        const responseFromNetwork = await fetch(request);
-        // response may be used only once
-        // we need to save clone to put one copy in cache
-        // and serve second one
-        putInCache(request, responseFromNetwork.clone());
-        return responseFromNetwork;
-    } catch (error) {
-        const fallbackResponse = await caches.match(fallbackUrl);
-        if (fallbackResponse) {
-            return fallbackResponse;
-        }
-        // when even the fallback response is not available,
-        // there is nothing we can do, but we must always
-        // return a Response object
-        return new Response('Network error happened', {
-            status: 408,
-            headers: { 'Content-Type': 'text/plain' },
-        });
-    }
-};
-
-const enableNavigationPreload = async () => {
-    if (self.registration.navigationPreload) {
-        // Enable navigation preloads!
-        await self.registration.navigationPreload.enable();
-    }
-};
-
-self.addEventListener('activate', (event) => {
-    event.waitUntil(enableNavigationPreload());
+// The install handler takes care of precaching the resources we always need.
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open(PRECACHE)
+      .then(cache => cache.addAll(PRECACHE_URLS))
+      .then(self.skipWaiting())
+  );
 });
 
-self.addEventListener('install', (event) => {
-    event.waitUntil(
-        addResourcesToCache([
-            './',
-            './index.html',
-            "./script.js",
-            "./style.css",
-        ])
-    );
+// The activate handler takes care of cleaning up old caches.
+self.addEventListener('activate', event => {
+  const currentCaches = [PRECACHE, RUNTIME];
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return cacheNames.filter(cacheName => !currentCaches.includes(cacheName));
+    }).then(cachesToDelete => {
+      return Promise.all(cachesToDelete.map(cacheToDelete => {
+        return caches.delete(cacheToDelete);
+      }));
+    }).then(() => self.clients.claim())
+  );
 });
 
-self.addEventListener('fetch', (event) => {
+// The fetch handler serves responses for same-origin resources from a cache.
+// If no response is found, it populates the runtime cache with the response
+// from the network before returning it to the page.
+self.addEventListener('fetch', event => {
+  // Skip cross-origin requests, like those for Google Analytics.
+  if (event.request.url.startsWith(self.location.origin)) {
     event.respondWith(
-        cacheFirst({
-            request: event.request,
-            preloadResponsePromise: event.preloadResponse,
-            
-        })
+      caches.match(event.request).then(cachedResponse => {
+        if (cachedResponse) {
+          return cachedResponse;
+        }
+
+        return caches.open(RUNTIME).then(cache => {
+          return fetch(event.request).then(response => {
+            // Put a copy of the response in the runtime cache.
+            return cache.put(event.request, response.clone()).then(() => {
+              return response;
+            });
+          });
+        });
+      })
     );
+  }
 });
