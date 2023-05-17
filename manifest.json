@@ -24,12 +24,6 @@
     "description": "PWABuilder Home Screen"
   },
   {
-    "src": "https://www.pwabuilder.com/assets/screenshots/screen2.png",
-    "sizes": "2880/1800",
-    "type": "image/png",
-    "description": "PWABuilder Report Card"
-  },
-  {
     "src": "https://www.pwabuilder.com/assets/screenshots/screen3.png",
     "sizes": "2880x1800",
     "type": "image/png",
@@ -38,7 +32,7 @@
 ], 
   "orientation": "any",
   "name": "Simple Calculator",
-  "short_name": "SimpleCalc",
+  "short_name": "Calc",
   "id": "com.example.myapp",
   "start_url": "./index.html",
   "theme_color": "#6464c8",
