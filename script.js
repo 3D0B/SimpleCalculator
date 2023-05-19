@@ -12,8 +12,13 @@ const DOT_CLASS_SELECTOR = '.calculator__button--is-dot';
 const SIGN_CHANGE_CLASS_SELECTOR = '.calculator__button--is-sign-change';
 const EQUAL_CLASS_SELECTOR = '.calculator__button--is-equal';
 
-console.log('SW PWa');
+console.log('SW');
 
+window.addEventListener('touchmove', function(e) {
+  if (e.touches.length > 1) {
+    e.preventDefault();
+  }
+}, { passive: false });
 
 
 
